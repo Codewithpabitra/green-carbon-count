@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="http://cdn.remixicon.com/releases/v1.1.1/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Option B: Latest known version from jsDelivr -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="stylesheet" href="/stylesheets/home.css">
+  </head>
+
+    <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+      @keyframes dance {
+      0%,100% { transform: rotate(0deg) scale(1); }
+      25%     { transform: rotate(-10deg) scale(1.1); }
+      50%     { transform: rotate(10deg) scale(1.1); }
+      75%     { transform: rotate(-10deg) scale(1.05); }
+    }
+
+    /* base animation class */
+    .animate-dance {
+      animation: dance 0.5s infinite;
+    }
+
+    /* make `hover:animate-dance` work by defining the hover rule */
+    .hover\:animate-dance:hover {
+      animation: dance 0.5s infinite;
+    }
+  </style>
+
+  <body class="bg-white ">
+    <Nav class=" p-[60px] py-[20px] flex justify-between items-center text-lg border-b  border-gray-200 ">
+      <div id="first" class=" text-xl text-white flex justify-center items-center">
+        <div class="h-[35px] w-[35px] rounded-md bg-green-600 mr-[5px]"><i class="ri-leaf-fill flex justify-center items-center "></i></div></i><span class="text-green-600 font-bold">EcoMonitor</span>
+    </div>
+      <div id="second " >
+        <ul class="flex justify-center items-center gap-6">
+            <a href="/" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-home-2-line"></i>Home</a>
+            <a href="/dashboard" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-dashboard-fill"></i>Dashboard</a>
+            <a href="" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-lightbulb-line"></i>AI Insights</a>
+            <a href="" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-bar-chart-line"></i>Analytics</a>
+            <a href="" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-group-line"></i>Community</a>
+            <a href="" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-book-open-line"></i>Hub</a>
+            <a href="" id="get-started-btn" class="bg-green-600 text-white px-[10px] py-[5px] rounded-md font-semibold ">Get Started</a>
+        </ul>
+      </div>
+    </Nav>
+
+
+    <main class="flex flex-col justify-between items-center px-[80px] py-[15px] relative ">
+        <div class="px-[17px] py-[4px] text-green-600 bg-green-50 rounded-full font-semibold ">
+            Smart Building Technology
+        </div>
+        <div class="mt-[20px]">
+            <span class="text-6xl font-bold ">Monitor.</span>
+            <span class="text-6xl font-bold text-green-600">Reduce.</span>
+            <span class="text-6xl font-bold text-blue-500">Sustain.</span>
+        </div>
+        <div class="w-[800px] text-center mt-[30px] mb-[40px]">
+            <p class="text-gray-500 ">Transform your campus, office, or residential building with our AI-powered sustainability platform. Real-time monitoring, intelligent insights, and community-driven carbon footprint reduction.</p>
+        </div>
+        <div class="flex justify-center items-center gap-[20px]">
+            <a href="" class="bg-green-600 text-white px-[20px] py-[10px] rounded-md font-semibold transform transition-transform duration-300 ease-in-out hover:scale-110 bg-blue-500 text-white px-6 py-2 rounded-lg">Start Monitoring<i class="ri-arrow-right-line ml-[7px]"></i></a>
+
+            <a href="" class="bg-gray-50 text-white border-[2px] px-[20px] py-[10px] rounded-md font-semibold transform transition-transform duration-300 ease-in-out hover:scale-110 bg-gray-200 text-white"><i class="ri-play-line mr-[7px]"></i>Watch Demo</a>
+        </div>
+        <div class="flex justify-between items-center mt-[60px] gap-[150px]">
+            <div class="text-center ">
+                <h2 class="text-4xl font-bold text-green-600 hover:animate-dance">50+</h2>
+                <p class="text-gray-500">Buildings Monitored</p>
+            </div>
+            <div class="text-center ">
+                <h2  class="text-4xl font-bold text-blue-500 hover:animate-dance">30%</h2>
+                <p class="text-gray-500">Average Energy Savings</p>
+            </div>
+            <div class="text-center ">
+                <h2  class="text-4xl font-bold text-green-600 hover:animate-dance">1M+</h2>
+                <p class="text-gray-500">CO₂ Reduced (kg)</p>
+            </div>
+        </div>
+
+        <div class="px-[20px] py-[10px] bg-white text-black border border-gray-400 rounded-md absolute top-[150px] right-[30px] animate-float"><i class="ri-circle-fill text-blue-500 m-[3px] text-[10px] "></i>Water: 92% conserved</div>
+        <div class="px-[20px] py-[10px] bg-white text-black border border-gray-400 rounded-md absolute top-[270px] right-[130px] z-200 animate-float"><i class="ri-circle-fill text-green-500 m-[3px] text-[10px] "></i>Air: Excellent quality</div>
+        <div class="px-[20px] py-[10px] bg-white text-black border border-gray-400 rounded-md  absolute top-[250px] right-[100px] animate-float"><i class="ri-circle-fill text-green-500 m-[3px] text-[10px]"></i>Energy 97% efficient</div>
+    </main>
+  </body>
+</html>

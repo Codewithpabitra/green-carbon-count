@@ -1,0 +1,27 @@
+{
+  "name": "green-carbon-count",
+  "version": "1.0.0",
+  "description": "This is a website regarding to carbon count",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codewithpabitra/green-carbon-count.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Codewithpabitra/green-carbon-count/issues"
+  },
+  "homepage": "https://github.com/Codewithpabitra/green-carbon-count#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "remixicon": "^4.6.0"
+  }
+}
