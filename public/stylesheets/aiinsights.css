@@ -1,0 +1,35 @@
+/* Responsive styles for screen width 900px and below */
+@media screen and (max-width: 900px) {
+
+  /* Main heading and paragraph */
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .mt-7 p {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  /* Cards grid */
+  .cards .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  /* Card style adjustments */
+  .cards .bg-white {
+    width: 100% !important;
+  }
+
+  /* Container padding for smaller screens */
+  .flex.flex-col.justify-center.items-start.px-30 {
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+  }
+}

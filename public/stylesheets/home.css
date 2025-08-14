@@ -1,2 +1,407 @@
+/* =========================================================
+   GLOBAL RESETS & HELPERS
+   ========================================================= */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+nav, main, footer { width: 100%; }
 
+/* Make the nav a stable positioning context for dropdown */
+nav { position: relative; z-index: 50; background: #fff; }
 
+/* Remove default list spacing if present */
+nav ul { list-style: none; margin: 0; padding: 0; }
+
+/* Smooth hover for links globally */
+a { transition: color .2s ease, background-color .2s ease, transform .2s ease; }
+
+/* Utility: clamp long lines in hero paragraph on large screens */
+@media (min-width: 1025px) {
+  main .w-\[800px\] { max-width: 800px !important; margin-left: auto; margin-right: auto; }
+}
+
+/* =========================================================
+   DESKTOP BASE (≥ 1025px)
+   ========================================================= */
+@media (min-width: 1025px) {
+  /* Keep your desktop layout intact */
+  nav ul { display: flex; gap: 16px; align-items: center; }
+  /* Subtle desktop hover */
+  nav a:hover { color: #16a34a !important; background: rgba(34,197,94,0.08); border-radius: 999px; }
+
+  /* Cards: polish with gentle lift */
+  main .grid > div.bg-white {
+    border-radius: 16px;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  main .grid > div.bg-white:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  }
+
+  /* Footer hover polish */
+  #footer a:hover { color: #34d399 !important; }
+}
+
+/* =========================================================
+   TABLETS (641px – 1024px)
+   ========================================================= */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Fit hero text better */
+  main .mt-\[20px\] span { font-size: 2.75rem !important; line-height: 1.15; display: inline-block; }
+
+  /* Paragraph width */
+  main .w-\[800px\] { width: 90% !important; margin-left: auto; margin-right: auto; }
+
+  /* Image height */
+  #image { height: 280px !important; }
+
+  /* Keep menu inline on tablets */
+  nav ul { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+}
+
+/* =========================================================
+   MOBILE (≤ 640px) — Hamburger, stacked layout, cleaner UI
+   ========================================================= */
+@media (max-width: 640px) {
+  /* ---------- NAVBAR: CSS-ONLY HAMBURGER ---------- */
+
+  /* Keep header row compact */
+  nav { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
+
+  /* Show UL but only display the hamburger item initially */
+  nav ul {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* Hide all links except the hamburger trigger */
+  nav ul a { display: none !important; }
+  nav ul a#get-started-btn { display: inline-block !important; }
+
+  /* Turn #get-started-btn into a hamburger button */
+  #get-started-btn {
+    position: relative;
+    width: 42px; height: 42px;
+    padding: 0 !important;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff !important;
+    color: transparent !important;            /* hide text */
+    font-size: 0 !important;                  /* hide text */
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+  }
+
+  /* 3 bars using one pseudo-element + shadows */
+  #get-started-btn::before {
+    content: "";
+    position: absolute;
+    left: 9px; right: 9px;
+    top: 12px;
+    height: 2px; background: #111827;        /* bar 1 */
+    box-shadow:
+      0 8px 0 0 #111827,                     /* bar 2 */
+      0 16px 0 0 #111827;                    /* bar 3 */
+    border-radius: 2px;
+  }
+
+  /* When the navbar (or any child) is focused, open dropdown */
+  nav:focus-within ul,
+  nav:hover ul {                              /* hover helps desktops with small widths */
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 12px; right: 12px;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: 0 16px 30px rgba(0,0,0,.08);
+  }
+
+  /* Show all menu items in dropdown, hide the hamburger itself inside the dropdown */
+  nav:focus-within ul a { display: block !important; width: 100%; padding: 10px 12px; border-radius: 8px; }
+  nav:focus-within ul a#get-started-btn { display: none !important; }
+
+  /* Dropdown item hovers */
+  nav:focus-within ul a:hover {
+    background: rgba(34,197,94,0.08);
+    color: #16a34a !important;
+  }
+
+  /* Keep focus when tapping the burger (so dropdown stays open) */
+  #get-started-btn:focus { outline: 2px solid #d1fae5; outline-offset: 2px; }
+
+  /* ---------- HERO & CTAs ---------- */
+
+  /* Tighter page padding */
+  main { padding: 16px !important; }
+
+  /* Headline sizing */
+  main .mt-\[20px\] span {
+    font-size: 2.05rem !important;
+    line-height: 1.2;
+    display: inline-block;
+  }
+
+  /* Image height for mobile */
+  #image { height: 210px !important; }
+
+  /* Center paragraph and make full width */
+  main .w-\[800px\] { width: 100% !important; padding: 0 6px; }
+
+  /* Stack CTA buttons */
+  main .flex.justify-center.items-center.gap-\[20px\] {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100%;
+  }
+  /* Make the buttons fill width nicely */
+  main .flex.justify-center.items-center.gap-\[20px\] a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 14px !important;
+    border-radius: 10px !important;
+  }
+
+  /* ---------- CARDS: prettier with gradient border ---------- */
+
+  /* Target your card blocks */
+  main .grid > div.bg-white {
+    position: relative;
+    border-radius: 16px;
+    background: #fff;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  /* Gradient border via mask trick */
+  main .grid > div.bg-white::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #22c55e, #3b82f6);
+    -webkit-mask: 
+      linear-gradient(#000 0 0) content-box, 
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+  main .grid > div.bg-white:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,.08);
+  }
+  /* Card spacing on mobile */
+  main .grid { padding-left: 6px; padding-right: 6px; }
+
+  /* ---------- FLOATING INFO BUBBLES ---------- */
+  /* Hide completely on mobile */
+  .animate-float { display: none !important; }
+
+  /* ---------- FOOTER UPGRADE ---------- */
+  #footer {
+    border-top: 2px solid transparent;
+    background:
+      linear-gradient(#111827, #111827) padding-box,
+      linear-gradient(135deg, rgba(52,211,153,.6), rgba(59,130,246,.6)) border-box;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+  }
+  #footer .max-w-6xl { padding-left: 14px; padding-right: 14px; }
+  #footer h2 { margin-bottom: 8px !important; }
+  #footer ul li a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 8px;
+  }
+  #footer ul li a:hover { background: rgba(34,197,94,0.08); color: #34d399 !important; }
+  #footer .text-center { padding-top: 6px; }
+}
+
+/* =========================================================
+   MID-SMALL (641px – 800px) TWEAKS FOR CARDS & IMAGE
+   ========================================================= */
+@media (min-width: 641px) and (max-width: 800px) {
+  #image { height: 240px !important; }
+  main .grid > div.bg-white { border-radius: 18px; }
+}
+
+/* =========================================================
+   SHARED SMALL POLISH
+   ========================================================= */
+/* Slightly round the hero gradient fades at edges for any size */
+#image > div { filter: blur(.0px); }
+
+/* Extra niceness: links in nav have subtle active tap scale on small screens */
+@media (max-width: 640px) {
+  nav a:active { transform: scale(.98); }
+}
+
+/* Navbar responsiveness for widths 665px–1327px (works with your existing HTML) */
+
+/* Tighter, flexible layout for mid screens */
+@media (min-width: 665px) and (max-width: 1327px) {
+  /* Make sure both 'nav' and 'Nav' are handled */
+  nav, Nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    padding: 12px 16px !important;
+    position: relative;
+  }
+
+  /* Brand block (left) */
+  nav #first, Nav #first {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex: 0 0 auto !important;
+    min-width: 0; /* prevent overflow */
+  }
+
+  /* Shrink the brand text a bit on these widths */
+  nav #first span, Nav #first span {
+    font-size: clamp(1rem, 1.6vw, 1.25rem) !important;
+    line-height: 1.2 !important;
+    white-space: nowrap;
+  }
+
+  /* Slightly smaller logo box */
+  nav #first > div, Nav #first > div {
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 6px !important;
+  }
+
+  /* Menu container (right) – your HTML has id="second " (note the space),
+     so we match with an attribute selector to be safe */
+  nav [id^="second"], Nav [id^="second"] {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  /* The UL holds anchors directly (no <li>), so style UL as a wrapping flex row */
+  nav [id^="second"] ul,
+  Nav [id^="second"] ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-end !important;     /* default right aligned */
+    gap: 8px 10px !important;                 /* row/column gaps */
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  /* Menu links: compact padding & font so more items fit */
+  nav [id^="second"] ul > a,
+  Nav [id^="second"] ul > a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 10px !important;
+    border-radius: 999px !important;
+    font-size: clamp(0.85rem, 1.05vw, 0.95rem) !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;           /* keep each item on one line */
+  }
+
+  /* Icon size a touch smaller so labels fit */
+  nav [id^="second"] ul > a i,
+  Nav [id^="second"] ul > a i {
+    font-size: 1em !important;
+  }
+
+  /* Keep "Get Started" visible and pushed to the end of the row(s) */
+  #get-started-btn {
+    order: 99 !important;                     /* always at the end */
+    padding: 6px 12px !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Extra compaction for 665px–900px where wrapping is likely */
+@media (min-width: 665px) and (max-width: 900px) {
+  /* Center items when they wrap to two rows for a balanced look */
+  nav [id^="second"] ul,
+  Nav [id^="second"] ul {
+    justify-content: center !important;
+  }
+
+  /* Hide icons to save horizontal space; keep labels only */
+  nav [id^="second"] ul > a i,
+  Nav [id^="second"] ul > a i {
+    display: none !important;
+  }
+
+  /* Slightly tighter link padding */
+  nav [id^="second"] ul > a,
+  Nav [id^="second"] ul > a {
+    padding: 6px 9px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav ul a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav ul a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+}

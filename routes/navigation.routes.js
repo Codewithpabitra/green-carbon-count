@@ -11,19 +11,19 @@ router.get("/calculator", (req,res) => {
 })
 
 router.get("/aiinsights", (req,res) => {
-    res.send("hello from ai insights")
+    res.render("aiinsights")
 })
 
 router.get("/analytics", (req,res) => {
-    res.send("hello from analytics")
+    res.render("analytics")
 })
 
 router.get("/community", (req,res) => {
-    res.send("hello from community")
+    res.render("community")
 })
 
 router.get("/hub", (req,res) => {
-    res.send("hello from Hub")
+    res.render("awarnessHub")
 })
 
 module.exports = router

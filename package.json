@@ -19,10 +19,16 @@
   },
   "homepage": "https://github.com/Codewithpabitra/green-carbon-count#readme",
   "dependencies": {
+    "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "path": "^0.12.7",
     "remixicon": "^4.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
   }
 }

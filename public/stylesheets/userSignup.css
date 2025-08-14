@@ -1,0 +1,40 @@
+@media screen and (max-width: 800px) {
+  /* Reduce body padding so it fits on small screens */
+  body {
+    padding: 20px 15px !important;
+  }
+
+  /* Keep original form look but make sure it fits */
+  form {
+    max-width: 90%;
+  }
+
+  /* Stack the grid fields vertically */
+  .grid.md\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Make buttons take full width */
+  button,
+  a.bg-blue-500 {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  /* Adjust heading for smaller screens */
+  h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* Company/organization label fix */
+  label[for="floating_company"] {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

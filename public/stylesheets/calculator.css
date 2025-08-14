@@ -1,0 +1,49 @@
+/* Responsive styles for screen width 900px and below */
+@media screen and (max-width: 900px) {
+
+  /* Heading and description */
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  /* Make paragraph take full width */
+  .mt-7 p {
+    width: 100% !important;
+    padding: 0 15px;
+  }
+
+  /* Calculator main container - stack vertically */
+  #Claculator-part {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  /* Form container */
+  #Claculator-part > div {
+    max-width: 100%;
+  }
+
+  /* Cards in the right side */
+  #Claculator-part .flex.flex-col.flex-wrap {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Individual card width */
+  #Claculator-part .sm\:w-\[350px\] {
+    width: 90% !important;
+  }
+
+  /* Transport input + select stacking for small width */
+  #Claculator-part form .flex.space-x-2 {
+    flex-direction: column;
+  }
+
+  #Claculator-part form .flex.space-x-2 input,
+  #Claculator-part form .flex.space-x-2 select {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Insights</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link
+      href="http://cdn.remixicon.com/releases/v1.1.1/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Option B: Latest known version from jsDelivr -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/stylesheets/aiinsights.css">
+
+
+    <style>
+  @keyframes floatUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Tailwind arbitrary animation */
+  .animate-floatUp {
+    animation: floatUp 1.5s ease-out forwards;
+  }
+</style>
+</head>
+<body class="p-6 bg-gradient-to-b from-green-100 via-white to-green-100 min-h-screen">
+    <a href="/" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"><i class="ri-arrow-left-line mr-2"></i>back to home</a>
+
+    <div class="flex flex-col justify-center items-start px-30">
+        <div class="mt-7 flex flex-col justify-center items-start gap-2 ">
+            <h1 class="text-3xl font-bold">AI-Powered Sustainability Insights</h1>
+            <p class="text-gray-600">Personalized recommendations to reduce your environmental impact</p>
+        </div>
+        <div class="cards mt-10">
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+
+  <!-- Energy Optimization -->
+  <div class="bg-white rounded-lg shadow p-6 w-full animate-floatUp">
+    <h2 class="text-lg font-semibold flex items-center text-green-700">
+      <span class="mr-2">💡</span> Energy Optimization
+    </h2>
+    <ul class="list-disc pl-6 mt-3 text-gray-700 space-y-1">
+      <li>Switch to LED lighting in all common areas - potential 15% energy savings</li>
+      <li>Install smart thermostats for automatic temperature control</li>
+      <li>Implement occupancy sensors to reduce unnecessary lighting</li>
+    </ul>
+  </div>
+
+  <!-- Water Conservation -->
+  <div class="bg-white rounded-lg shadow p-6 animate-floatUp" style="animation-delay: 0.2s;">
+    <h2 class="text-lg font-semibold flex items-center text-blue-700">
+      <span class="mr-2">💧</span> Water Conservation
+    </h2>
+    <ul class="list-disc pl-6 mt-3 text-gray-700 space-y-1">
+      <li>Install low-flow fixtures to reduce water consumption by 22%</li>
+      <li>Set up rainwater harvesting system for irrigation</li>
+      <li>Fix detected leaks in the basement level immediately</li>
+    </ul>
+  </div>
+
+  <!-- Waste Management -->
+  <div class="bg-white rounded-lg shadow p-6 animate-floatUp" style="animation-delay: 0.4s;">
+    <h2 class="text-lg font-semibold flex items-center text-green-600">
+      <span class="mr-2">♻</span> Waste Management
+    </h2>
+    <ul class="list-disc pl-6 mt-3 text-gray-700 space-y-1">
+      <li>Increase recycling stations on each floor</li>
+      <li>Implement composting program for organic waste</li>
+      <li>Partner with local recycling facilities for electronic waste</li>
+    </ul>
+  </div>
+
+  <!-- Transportation -->
+  <div class="bg-white rounded-lg shadow p-6 animate-floatUp" style="animation-delay: 0.6s;">
+    <h2 class="text-lg font-semibold flex items-center text-purple-700">
+      <span class="mr-2">🚗</span> Transportation
+    </h2>
+    <ul class="list-disc pl-6 mt-3 text-gray-700 space-y-1">
+      <li>Encourage carpooling with a digital matching system</li>
+      <li>Install bike racks and promote cycling to work</li>
+      <li>Subsidize public transportation passes for employees</li>
+    </ul>
+  </div>
+
+</div>
+
+        </div>
+    </div>
+    
+
+
+</body>
+</html>
