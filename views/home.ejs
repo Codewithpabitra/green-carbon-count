@@ -4,16 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link
-      href="http://cdn.remixicon.com/releases/v1.1.1/remixicon.css"
-      rel="stylesheet"
-    />
+    
     <!-- Option B: Latest known version from jsDelivr -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <link rel="stylesheet" href="/stylesheets/home.css">
   </head>
 
@@ -65,38 +63,36 @@
   </style>
 
   <body class="bg-white ">
-    <Nav class=" p-[20px] py-[20px] flex justify-between items-center text-lg border-b  border-gray-200 ">
-      <div id="first" class=" text-xl text-white flex justify-center items-center">
-        <div class="h-[35px] w-[35px] rounded-md bg-green-600 mr-[5px]"><i class="ri-leaf-fill flex justify-center items-center "></i></div></i><span class="text-green-600 font-bold">EcoMonitor</span>
-    </div>
-      <div id="second " >
-        <ul class="flex justify-center items-center gap-4">
-            <a href="/" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-home-2-line"></i>Home</a>
-            <a href="/nav/dashboard" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-dashboard-fill"></i>Dashboard</a>
-             <a href="/nav/calculator" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-calculator-line"></i>Calculator</a>
-            <a href="/nav/aiinsights" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-lightbulb-line"></i>AI Insights</a>
-            <a href="/nav/analytics" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-bar-chart-line"></i>Analytics</a>
-            <a href="/nav/community" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-group-line"></i>Community</a>
-            <a href="/nav/hub" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full "><i class="ri-book-open-line"></i>Hub</a>
-            <a href="/users/signup" id="get-started-btn" class="bg-green-600 text-white px-[10px] py-[5px] rounded-md font-semibold ">Get Started</a>
-        </ul>
-      </div>
 
-        <!-- Mobile Menu Button -->
-        <!-- <div id="mobileMenu" class="relative">
-          <button id="menuBtn" class="text-2xl"><i class="ri-menu-line"></i></button>
-          <div id="menuDropdown" class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg overflow-hidden hidden">
-            <a href="/" class="block px-4 py-2 hover:bg-green-50">Home</a>
-            <a href="/nav/dashboard" class="block px-4 py-2 hover:bg-green-50">Dashboard</a>
-            <a href="/nav/calculator" class="block px-4 py-2 hover:bg-green-50">Calculator</a>
-            <a href="/nav/aiinsights" class="block px-4 py-2 hover:bg-green-50">AI Insights</a>
-            <a href="/nav/analytics" class="block px-4 py-2 hover:bg-green-50">Analytics</a>
-            <a href="/nav/community" class="block px-4 py-2 hover:bg-green-50">Community</a>
-            <a href="/nav/hub" class="block px-4 py-2 hover:bg-green-50">Hub</a>
-            <a href="/users/signup" class="block px-4 py-2 text-white bg-green-600">Get Started</a>
-          </div>
-        </div> -->
-    </Nav>
+     <nav class="p-[20px] py-[20px] flex justify-between items-center text-lg border-b border-gray-200">
+    <!-- Logo -->
+    <div id="first" class="text-xl text-white flex justify-center items-center">
+        <div class="h-[35px] w-[35px] rounded-md bg-green-600 mr-[5px]">
+            <i class="ri-leaf-fill flex justify-center items-center"></i>
+        </div>
+        <span class="text-green-600 font-bold">EcoMonitor</span>
+    </div>
+
+    <!-- Menu links -->
+    <div id="second" class="hidden md:flex">
+        <ul class="flex justify-center items-center gap-4">
+            <a href="/" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full"><i class="ri-home-2-line"></i>Home</a>
+            <a href="/nav/dashboard" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full"><i class="ri-dashboard-fill"></i>Dashboard</a>
+            <a href="/nav/calculator" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full"><i class="ri-calculator-line"></i>Calculator</a>
+            <a href="/nav/aiinsights" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full"><i class="ri-lightbulb-line"></i>AI Insights</a>
+            <a href="/nav/analytics" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full"><i class="ri-bar-chart-line"></i>Analytics</a>
+            <a href="/nav/community" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full"><i class="ri-group-line"></i>Community</a>
+            <a href="/nav/hub" class="px-[17px] py-[4px] hover:text-green-600 hover:bg-green-50 hover:rounded-full"><i class="ri-book-open-line"></i>Hub</a>
+            <a href="/users/signup" id="get-started-btn" class="bg-green-600 text-white px-[10px] py-[5px] rounded-md font-semibold">Get Started</a>
+        </ul>
+    </div>
+
+    <!-- Menu icon - only visible on mobile -->
+    <div class="md:hidden">
+        <i class="ri-menu-line text-2xl text-green-600 cursor-pointer"></i>
+    </div>
+</nav>
+
 
 
     <main class="flex flex-col justify-between items-center px-[80px] py-[15px] relative ">
@@ -121,7 +117,7 @@
         <div class="w-[800px] text-center mt-[30px] mb-[40px]">
             <p class="text-gray-500 ">Transform your campus, office, or residential building with our AI-powered sustainability platform. Real-time monitoring, intelligent insights, and community-driven carbon footprint reduction.</p>
         </div>
-        <div class="flex justify-center items-center gap-[20px]">
+        <div class="flex justify-center items-center gap-[20px] mb-10">
             <a href="/nav/dashboard" class="bg-green-600 text-white px-[20px] py-[10px] rounded-md font-semibold transform transition-transform duration-300 ease-in-out hover:scale-110 bg-blue-500 text-white px-6 py-2 rounded-lg">Start Monitoring<i class="ri-arrow-right-line ml-[7px]"></i></a>
 
             <a href="" class="bg-gray-50 text-white border-[2px] px-[20px] py-[10px] rounded-md font-semibold transform transition-transform duration-300 ease-in-out hover:scale-110 bg-gray-200 text-white"><i class="ri-play-line mr-[7px]"></i>Watch Demo</a>
@@ -142,7 +138,7 @@
             </div>
         </div> -->
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl m-15">
+        <div id="features-card" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl ">
     
     <!-- Card Template -->
 
@@ -248,6 +244,8 @@
     }, { threshold: 0.1 });
     
     observer.observe(footer);
+
+  
     </script>
   </body>
 </html>
