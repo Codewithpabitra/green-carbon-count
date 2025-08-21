@@ -1,4 +1,4 @@
-const express = require("express")
+import express from "express"
 
 const router = express.Router()
 
@@ -26,4 +26,4 @@ router.get("/hub", (req,res) => {
     res.render("awarnessHub")
 })
 
-module.exports = router
+export default router

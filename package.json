@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is a website regarding to carbon count",
   "main": "app.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,10 +19,16 @@
   },
   "homepage": "https://github.com/Codewithpabitra/green-carbon-count#readme",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.18.0",
+    "mongoose": "^8.17.2",
     "path": "^0.12.7",
     "remixicon": "^4.6.0"
   },
