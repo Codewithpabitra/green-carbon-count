@@ -41,83 +41,101 @@
       <h2 class="text-xl font-bold text-gray-800">Environmental Data</h2>
     </div>
 
-    <form class="space-y-4">
+    <form id="carbonForm" class="space-y-4">
 
-      <!-- Monthly Electricity Usage -->
-      <div>
-        <label class="flex items-center space-x-2 font-medium text-gray-700">
-          <span class="text-green-600">⚡</span>
-          <span>Monthly Electricity Usage (kWh)</span>
-        </label>
-        <input type="number" placeholder="e.g., 250" class="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
-      </div>
+  <!-- Monthly Electricity Usage -->
+  <div>
+    <label class="flex items-center space-x-2 font-medium text-gray-700">
+      <span class="text-green-600">⚡</span>
+      <span>Monthly Electricity Usage (kWh)</span>
+    </label>
+    <input id="electricity" type="number" placeholder="e.g., 250" 
+      class="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
+  </div>
 
-      <!-- Monthly Gas Usage -->
-      <div>
-        <label class="flex items-center space-x-2 font-medium text-gray-700">
-          <span class="text-green-600">🏠</span>
-          <span>Monthly Gas Usage (m³)</span>
-        </label>
-        <input type="number" placeholder="e.g., 50" class="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
-      </div>
-        <!-- Monthly Water Usage -->
-      <div>
-        <label class="block font-medium text-gray-700">Monthly Water Usage (L)</label>
-        <input type="number" placeholder="e.g., 3000" class="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
-      </div>
+  <!-- Monthly Gas Usage -->
+  <div>
+    <label class="flex items-center space-x-2 font-medium text-gray-700">
+      <span class="text-green-600">🏠</span>
+      <span>Monthly Gas Usage (m³)</span>
+    </label>
+    <input id="gas" type="number" placeholder="e.g., 50" 
+      class="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
+  </div>
 
-      <!-- Monthly Transport Distance -->
-      <div>
-        <label class="flex items-center space-x-2 font-medium text-gray-700">
-          <span class="text-green-600">🔗</span>
-          <span>Monthly Transport Distance (km)</span>
-        </label>
-        <div class="flex space-x-2 mt-1">
-          <input type="number" placeholder="e.g., 800" class="w-2/3 border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
-          <select class="w-1/3 border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
-            <option>Car</option>
-            <option>Bus</option>
-            <option>Train</option>
-            <option>Bike</option>
-          </select>
-        </div>
-      </div>
-       <!-- Monthly Waste Generation -->
-      <div>
-        <label class="block font-medium text-gray-700">Monthly Waste Generation (kg)</label>
-        <input type="number" placeholder="e.g., 30" class="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
-      </div>
+  <!-- Monthly Water Usage -->
+  <div>
+    <label class="block font-medium text-gray-700">Monthly Water Usage (L)</label>
+    <input id="water" type="number" placeholder="e.g., 3000" 
+      class="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
+  </div>
 
-      <!-- Button -->
-      <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg font-medium mt-4">
-        Calculate Carbon Footprint
-      </button>
+  <!-- Monthly Transport Distance -->
+  <div>
+    <label class="flex items-center space-x-2 font-medium text-gray-700">
+      <span class="text-green-600">🔗</span>
+      <span>Monthly Transport Distance (km)</span>
+    </label>
+    <div class="flex space-x-2 mt-1">
+      <input id="transport" type="number" placeholder="e.g., 800" 
+        class="w-2/3 border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
+      <select id="transportMode" 
+        class="w-1/3 border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
+        <option>Car</option>
+        <option>Bus</option>
+        <option>Train</option>
+        <option>Bike</option>
+      </select>
+    </div>
+  </div>
 
-    </form>
-        </div>
+  <!-- Monthly Waste Generation -->
+  <div>
+    <label class="block font-medium text-gray-700">Monthly Waste Generation (kg)</label>
+    <input id="waste" type="number" placeholder="e.g., 30" 
+      class="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-green-500 outline-none">
+  </div>
 
-        <!-- Another two divs of the calculator part  -->
+  <!-- Button -->
+  <button type="submit" 
+    class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg font-medium mt-4">
+    Calculate Carbon Footprint
+  </button>
+</form>
+
+<!-- Result Section -->
+<div class="mt-6 p-4 border rounded-lg bg-gray-50">
+  <h3 class="font-bold text-lg">Result:</h3>
+  <p id="result" class="text-green-700 mt-2"></p>
+  <ul id="suggestions" class="list-disc list-inside text-gray-700 mt-2"></ul>
+</div>
+
+        <!-- </div> -->
+
+        <!-- Another two divs of the calculator part 
         <div class="flex flex-col flex-wrap gap-6 justify-center items-center">
 
-    <!-- Card 1 -->
-    <div class="bg-white rounded-xl shadow-md p-6 w-full sm:w-[350px]">
+    
+    <! <div class="bg-white rounded-xl shadow-md p-6 w-full sm:w-[350px]"> -->
       <!-- Top section -->
-      <div class="text-center border-b pb-4">
-        <p class="text-green-700 font-medium">Your Carbon Footprint</p>
-        <p class="text-5xl font-bold text-gray-800 mt-2">608.5</p>
-        <p class="text-gray-500 text-sm">kg CO₂ equivalent per month</p>
-        <div class="mt-4 bg-green-50 rounded-lg p-3 flex justify-center items-center gap-2">
-          <span class="text-green-600 text-xl">🌳</span>
-          <p class="text-green-700 font-medium">28 trees</p>
-        </div>
-        <p class="text-gray-500 text-xs mt-1">needed to offset your emissions</p>
-      </div>
+        <!-- <div class="text-center  pb-4"> -->
+            <!-- <p class="text-green-700 font-medium">Your Carbon Footprint</p>
+            <p class="text-5xl font-bold text-gray-800 mt-2">608.5</p>
+            <p class="text-gray-500 text-sm">kg CO₂ equivalent per month</p>
+            <div class="mt-4 bg-green-50 rounded-lg p-3 flex justify-center items-center gap-2">
+              <span class="text-green-600 text-xl">🌳</span>
+              <p class="text-green-700 font-medium">28 trees</p>
+            </div>
+            <p class="text-gray-500 text-xs mt-1">needed to offset your emissions</p> -->
 
-      <!-- Bottom section -->
+
+        <!-- </div> -->
       
-    </div>
-    <div class=" mt-5 bg-white rounded-xl shadow-md p-6 w-full sm:w-[350px]">
-        <div class="  ">
+    <!-- </div> -->
+
+    <!-- card 2.  -->
+    <!-- <div class=" mt-5 bg-white rounded-xl shadow-md p-6 w-full sm:w-[350px]"> -->
+        <!-- <div class="  ">
         <p class="font-medium text-gray-800 mb-3">Quick Tips to Reduce Emissions</p>
         <ul class="space-y-3 text-sm">
           <li class="flex items-start gap-2">
@@ -142,10 +160,12 @@
             </div>
           </li>
         </ul>
-      </div>
-    </div>
+        </div> -->
 
-    <!-- Card 2 (duplicate for demo) -->
+
+    <!-- </div> -->
+
+    
     
 
   </div>
@@ -153,5 +173,40 @@
 
 
     
+
+    <script>
+document.getElementById("carbonForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const formData = {
+    electricity: parseFloat(document.getElementById("electricity").value) || 0,
+    gas: parseFloat(document.getElementById("gas").value) || 0,
+    water: parseFloat(document.getElementById("water").value) / 1000 || 0, // convert Liters → m³
+    waste: parseFloat(document.getElementById("waste").value) || 0,
+    transport: parseFloat(document.getElementById("transport").value) || 0,
+    transportMode: document.getElementById("transportMode").value
+  };
+
+  const res = await fetch("http://localhost:3000/calculate-footprint", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  });
+
+  const data = await res.json();
+
+  document.getElementById("result").innerText = 
+    `Total Carbon Footprint: ${data.totalCarbon} kg CO₂`;
+
+  const suggestionList = document.getElementById("suggestions");
+  suggestionList.innerHTML = "";
+  data.suggestions.forEach(s => {
+    const li = document.createElement("li");
+    li.textContent = s;
+    suggestionList.appendChild(li);
+  });
+});
+</script>
+
 </body>
 </html>

@@ -1,5 +1,7 @@
 import { Router } from "express";
 import { authenticate, isOrg, isStudent } from "../middleware/auth.js";
+import Organization from "../models/Organization.js";
+import Student from "../models/Student.js";
 
 const router = Router();
 
@@ -51,9 +53,24 @@ router.get("/hub", authenticate,  (req, res) => {
   res.render("awarnessHub")
 });
 
-router.get("/community", authenticate, (req, res) => {
-  res.render("community")
+router.get("/community", authenticate, async (req, res) => {
+
+  try {
+    // Fetch all organizations
+    const organizations = await Organization.find();
+
+    // Fetch all students with organization info
+    const students = await Student.find().populate("orgId", "orgName");
+
+    // Pass to EJS
+    res.render("community", { organizations, students });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Server error");
+  }
+
 });
+
 
 // ORG(Admin Routes)
 router.get("/aiinsights", authenticate, isOrg, (req, res) => {
@@ -63,6 +80,8 @@ router.get("/aiinsights", authenticate, isOrg, (req, res) => {
 router.get("/analytics", authenticate, isOrg, (req, res) => {
   res.render("analytics")
 });
+
+
 
 export default router;
 
