@@ -1,0 +1,13 @@
+Date,Entity,Location,Electricity_kWh,CookingGas_LPG_kg,NaturalGas_therms,Petrol_liters,Diesel_liters,Car_km,Motorbike_km,Bus_km,Train_km,Metro_km,Flight_km_shorthaul,Flight_km_longhaul,Water_kiloliters,SolidWaste_kg,Recycled_kg,Food_Meat_kg,Food_Dairy_kg,Food_PlantBased_kg
+2025-08-01,SampleUser,"Kolkata, IN",7.0,14.2,0,2.0,0,10,0,5,0,0,0,0,0.5,1.2,0.3,0.2,0.4,1.5
+2025-08-03,SampleUser,"Kolkata, IN",7.3,0.0,0,2.5,0,12,0,8,8,6,0,0,0.6,1.4,0.4,0.3,0.5,1.7
+2025-08-05,SampleUser,"Kolkata, IN",7.6,0.0,0,3.0,0,14,0,11,16,12,0,0,0.7,1.6,0.5,0.2,0.6,1.9
+2025-08-07,SampleUser,"Kolkata, IN",7.9,0.0,0,2.0,0,16,0,14,24,0,0,0,0.8,1.2,0.3,0.3,0.4,2.1
+2025-08-09,SampleUser,"Kolkata, IN",8.2,0.0,0,2.5,0,18,0,5,32,6,0,0,0.5,1.4,0.4,0.2,0.5,1.5
+2025-08-11,SampleUser,"Kolkata, IN",8.5,0.0,0,3.0,0,20,0,8,0,12,0,0,0.6,1.6,0.5,0.3,0.6,1.7
+2025-08-13,SampleUser,"Kolkata, IN",8.8,14.2,0,2.0,0,22,0,11,8,0,0,0,0.7,1.2,0.3,0.2,0.4,1.9
+2025-08-15,SampleUser,"Kolkata, IN",9.1,0.0,0,2.5,0,24,0,14,16,6,0,0,0.8,1.4,0.4,0.3,0.5,2.1
+2025-08-17,SampleUser,"Kolkata, IN",9.4,0.0,0,3.0,0,26,0,5,24,12,0,0,0.5,1.6,0.5,0.2,0.6,1.5
+2025-08-19,SampleUser,"Kolkata, IN",9.7,0.0,0,2.0,0,28,0,8,32,0,0,0,0.6,1.2,0.3,0.3,0.4,1.7
+2025-08-21,SampleUser,"Kolkata, IN",10.0,0.0,0,2.5,0,30,0,11,0,6,0,0,0.7,1.4,0.4,0.2,0.5,1.9
+2025-08-23,SampleUser,"Kolkata, IN",10.3,0.0,0,3.0,0,32,0,14,8,12,0,0,0.8,1.6,0.5,0.3,0.6,2.1

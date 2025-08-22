@@ -3,28 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awarness Hub Page</title>
-     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link
-      href="http://cdn.remixicon.com/releases/v1.1.1/remixicon.css"
-      rel="stylesheet"
-    />
-    <!-- Option B: Latest known version from jsDelivr -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Awareness Hub - Carbon Footprint Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/stylesheets/dashboard.css">
 </head>
-<body  class="p-6 bg-gradient-to-b from-green-100 via-white to-green-100 min-h-screen" >
-     <a href="/" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"><i class="ri-arrow-left-line mr-2"></i>back to home</a>
+<body class="p-6 min-h-screen bg-gradient-to-b from-green-100 via-white to-green-100 ">
 
-    <div class="mt-7 flex flex-col justify-center items-start gap-2 ">
-            <h1 class="text-3xl font-bold">Awarness Hub</h1>
-            <p class="text-gray-600">Comming Soon - On the way</p>
+    <!-- Back button -->
+    <a href="/" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 flex items-center w-max">
+        <i class="ri-arrow-left-line mr-2"></i> Back to Home
+    </a>
+
+    <!-- Header -->
+    <div class="mt-7 flex flex-col justify-start items-start gap-2">
+        <h1 class="text-3xl font-bold text-green-900">Awareness Hub</h1>
+        <p class="text-gray-600">Learn how to reduce your carbon footprint with actionable tips!</p>
     </div>
-    
-        
+
+    <!-- Awareness Suggestions Grid -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Suggestion Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+                <i class="ri-plant-line text-green-600 text-3xl mr-3"></i>
+                <h2 class="text-xl font-semibold">Plant Trees</h2>
+            </div>
+            <p class="text-gray-700">Trees absorb CO₂ and produce oxygen. Planting trees regularly can help offset your carbon emissions.</p>
+        </div>
+
+        <!-- Suggestion Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+                <i class="ri-bicycle-line text-green-600 text-3xl mr-3"></i>
+                <h2 class="text-xl font-semibold">Use Eco-Friendly Transport</h2>
+            </div>
+            <p class="text-gray-700">Reduce car usage by biking, walking, or using public transport to decrease your transportation carbon footprint.</p>
+        </div>
+
+        <!-- Suggestion Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+                <i class="ri-flashlight-line text-green-600 text-3xl mr-3"></i>
+                <h2 class="text-xl font-semibold">Save Energy</h2>
+            </div>
+            <p class="text-gray-700">Turn off unused lights and devices, use energy-efficient appliances, and consider renewable energy sources.</p>
+        </div>
+
+        <!-- Suggestion Card 4 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+                <i class="ri-water-line text-green-600 text-3xl mr-3"></i>
+                <h2 class="text-xl font-semibold">Conserve Water</h2>
+            </div>
+            <p class="text-gray-700">Reducing water consumption saves energy used in water heating and treatment, lowering your carbon footprint.</p>
+        </div>
+
+        <!-- Suggestion Card 5 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+                <i class="ri-recycle-line text-green-600 text-3xl mr-3"></i>
+                <h2 class="text-xl font-semibold">Recycle & Reduce Waste</h2>
+            </div>
+            <p class="text-gray-700">Proper recycling and reducing waste reduces emissions from landfills and production of new materials.</p>
+        </div>
+
+        <!-- Suggestion Card 6 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
+            <div class="flex items-center mb-4">
+                <i class="ri-restaurant-line text-green-600 text-3xl mr-3"></i>
+                <h2 class="text-xl font-semibold">Eat Sustainable Food</h2>
+            </div>
+            <p class="text-gray-700">Opt for plant-based diets, reduce meat consumption, and buy local produce to lower your food-related carbon emissions.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center text-gray-600">
+        &copy; 2025 Awareness Hub | Carbon Footprint Management Tips
+    </footer>
+
 </body>
 </html>
