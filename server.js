@@ -15,6 +15,16 @@ import csv from "csv-parser";
 import fs from "fs";
 import axios from "axios";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import SensorData from "./models/SensorData.js"
+// import isOrg from "./middleware/isOrg.js";
+// import { authenticate, isOrg, isStudent } from "./middleware/auth.js";
+
+// import dashboardRoutes from "./routes/dashboard.js";
+
+
+
+
+// import { fileURLToPath } from "url";
 
 import analyticsRoutes from "./routes/analytics.js";
 
@@ -39,6 +49,7 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use(cors({
   origin: `http://localhost:${PORT}`, // frontend URL
@@ -160,7 +171,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-
+// app.use(dashboardRoutes); // use the dashboard route
 
 // GET route to render upload page
 // app.get("/aiinsights", (req, res) => {
@@ -384,6 +395,36 @@ const upload = multer({ storage });
 
 //   res.render("aiinsights", { analysis, aiInsights });
 // });
+
+// this and after is the "/dashboard" data
+// API route - save data
+app.post("/data", async (req, res) => {
+  try {
+    const newData = new SensorData(req.body);
+    await newData.save();
+    res.status(201).json({ message: "Data saved successfully" });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// API route - get all data (JSON)
+app.get("/data", async (req, res) => {
+  const allData = await SensorData.find().sort({ timestamp: -1 });
+  res.json(allData);
+});
+
+// // Web route - dashboard (with authenticate middleware)
+// app.get("/dashboard", authenticate, async (req, res) => {
+//   try {
+//     const allData = await SensorData.find().sort({ timestamp: -1 }).limit(10);
+//     res.render("dashboard", { sensorData: allData });
+//   } catch (err) {
+//     res.status(500).send("Error loading dashboard");
+//   }
+// });
+
+// app.use("/", dashboardRoutes);
 
 
 
