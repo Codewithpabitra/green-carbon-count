@@ -429,7 +429,7 @@ app.get("/data", async (req, res) => {
 
 
 // ✅ Gemini Initialization
-const gemini_api_key = "AIzaSyAzxvAGURWwHS8npAx1hh_gM29fT0fusJ4";
+const gemini_api_key = `${process.env.GEMINI_API_KEY2}`;
 const genAI = new GoogleGenerativeAI(gemini_api_key);
 
 app.get("/aiinsights", (req, res) => {
