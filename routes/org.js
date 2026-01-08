@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
 import dotenv from "dotenv"
-import Organization from "../models/organization.js";
+import Organization from "../models/Organization.js";
 
 const router = Router();
 dotenv.config();
