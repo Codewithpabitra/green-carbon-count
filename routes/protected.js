@@ -159,7 +159,7 @@ router.post("/add-challenge/:id", authenticate, async (req, res) => {
 //   res.render("analytics")
 // });
 
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: "/tmp" });
 
 // Temporary storage for insights
 let lastInsights = null;
